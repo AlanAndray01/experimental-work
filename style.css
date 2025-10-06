@@ -3,11 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     width: 100%;
-    height:auto;
+    height: auto;
     background: #e8e8e8;
 }
+
 .container {
     margin: 0px;
     width: 100%;
@@ -16,13 +18,15 @@ body {
 }
 
 nav {
-  display: flex;
-  align-items: center;
-  border-radius: 12px;
-  border: 2px solid black;
-  justify-content: space-between; /* automatically spaces left-middle-right */
-  height: 60px;
-  padding: 0 10px; /* keeps space from edges */
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    border: 2px solid black;
+    justify-content: space-between;
+    /* automatically spaces left-middle-right */
+    height: 60px;
+    padding: 0 10px;
+    /* keeps space from edges */
 }
 
 #chk1 {
@@ -49,8 +53,149 @@ nav img {
     border-radius: 45px;
 }
 
+/* This is the right nav profile button css */
+.rightnav {
+    display: flex;
+    align-items: center;
+}
 
-/* Search box button */ 
+.profile-container {
+    position: relative;
+}
+
+/* Profile button in navbar */
+.profile-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    /* Increased size */
+    height: 48px;
+    /* Increased size */
+}
+
+.profile-btn:hover {
+    background-color: #f5f5f5;
+}
+
+/* Profile image in navbar button */
+.profile-btn img {
+    width: 40px !important;
+    /* Increased from 24px */
+    height: 40px !important;
+    /* Increased from 24px */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-icon {
+    width: 30px !important;
+    /* Increased from 24px */
+    height: 30px !important;
+    /* Increased from 24px */
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 280px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e0e0e0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.profile-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.profile-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    flex-shrink: 0;
+}
+
+.profile-info h3 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.profile-info p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.3;
+}
+
+.profile-menu {
+    padding: 0.5rem;
+}
+
+.profile-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #333;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    gap: 0.75rem;
+}
+
+.profile-menu-item:hover {
+    background-color: #f5f5f5;
+}
+
+.profile-menu-item svg {
+    flex-shrink: 0;
+}
+
+.profile-menu-item.logout {
+    color: #d32f2f;
+}
+
+.profile-menu-item.logout:hover {
+    background-color: #ffebee;
+}
+
+.profile-menu-divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 0.5rem 0;
+}
+
+
+/* Search box button */
 /* Floating Search Button */
 .floating-search-btn {
     position: fixed;
@@ -113,8 +258,15 @@ nav img {
 }
 
 @keyframes modalFade {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .search-header {
@@ -244,35 +396,35 @@ nav img {
         bottom: 20px;
         right: 20px;
     }
-    
+
     .floating-search-btn i {
         font-size: 24px;
     }
-    
+
     .search-container {
         height: 1000px;
         padding: 60px 20px;
         margin: 10px;
     }
-    
+
     .search-header h2 {
         font-size: 1.5rem;
     }
-    
+
     .search-input {
         padding: 18px 20px;
         font-size: 1.1rem;
     }
-    
+
     .search-submit {
         padding: 0 20px;
     }
 
     .close-btn {
         position: absolute;
-    right: 5px;
-    top: 5px;
-    font-size: 1rem;
+        right: 5px;
+        top: 5px;
+        font-size: 1rem;
     }
 }
 
@@ -282,19 +434,19 @@ nav img {
         gap: 20px;
         text-align: center;
     }
-    
+
     .search-box {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .search-submit {
         position: static;
         padding: 15px;
         border-radius: 50px;
         margin-top: 10px;
     }
-    
+
     .search-input {
         border-radius: 50px;
     }
@@ -310,132 +462,132 @@ main {
 }
 
 .slider-container {
-            max-width: 100%;
+    max-width: 100%;
 
-            margin-top: 8px;
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
+    margin-top: 8px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
 
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            height: 450px;
-        }
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 450px;
+}
 
-        .slide {
-            min-width: 100%;
-            height: 100%;
-            position: relative;
-        }
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
 
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
-        .slide-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-            color: white;
-            padding: 30px 20px 20px;
-        }
+.slide-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: white;
+    padding: 30px 20px 20px;
+}
 
-        .slide-title {
-            font-size: 1.5rem;
-            margin-bottom: 5px;
-        }
+.slide-title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
 
-        .slide-description {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
+.slide-description {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
 
-        .btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.7);
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5rem;
-            color: #333;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #333;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
 
-        .btn:hover {
-            background: rgba(255, 255, 255, 0.9);
-            transform: translateY(-50%) scale(1.1);
-        }
+.btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-50%) scale(1.1);
+}
 
-        .btn-prev {
-            left: 20px;
-        }
+.btn-prev {
+    left: 20px;
+}
 
-        .btn-next {
-            right: 20px;
-        }
+.btn-next {
+    right: 20px;
+}
 
-        .dots-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 15px;
-        }
+.dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
 
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
 
-        .dot.active {
-            background: white;
-        }
+.dot.active {
+    background: white;
+}
 
-        @media (max-width: 768px) {
-            .slider-container {
-                max-width: 100%;
-            }
-            
-            .slider {
-                height: 350px;
-            }
-            
-            .btn {
-                width: 40px;
-                height: 40px;
-                font-size: 1.2rem;
-            }
-        }
+@media (max-width: 768px) {
+    .slider-container {
+        max-width: 100%;
+    }
 
-        @media (max-width: 480px) {
-            .slider {
-                height: 250px;
-            }
-            
-            .slide-title {
-                font-size: 1.2rem;
-            }
-            
-            .slide-description {
-                font-size: 0.8rem;
-            }
-        }
+    .slider {
+        height: 350px;
+    }
+
+    .btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        height: 250px;
+    }
+
+    .slide-title {
+        font-size: 1.2rem;
+    }
+
+    .slide-description {
+        font-size: 0.8rem;
+    }
+}

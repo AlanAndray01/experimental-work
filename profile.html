@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Valente Watches</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .profile-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .profile-header h1 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-header p {
+            color: #666;
+        }
+
+        .profile-picture-section {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            cursor: pointer;
+            border: 3px solid #e0e0e0;
+            transition: border-color 0.3s ease;
+        }
+
+        .profile-picture:hover {
+            border-color: #007bff;
+        }
+
+        .profile-picture svg {
+            width: 60px;
+            height: 60px;
+            color: #666;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .change-photo-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .change-photo-btn:hover {
+            background: #0056b3;
+        }
+
+        .profile-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #007bff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+
+        #profileImageInput {
+            display: none;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #007bff;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <a href="index.html" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Back to Home
+        </a>
+
+        <div class="profile-header">
+            <h1>My Profile</h1>
+            <p>Manage your account information</p>
+        </div>
+
+        <div class="profile-picture-section">
+            <div class="profile-picture" onclick="document.getElementById('profileImageInput').click()">
+                <!-- Default user icon -->
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </div>
+            <input type="file" id="profileImageInput" accept="image/*">
+            <button class="change-photo-btn" onclick="document.getElementById('profileImageInput').click()">
+                Change Profile Photo
+            </button>
+        </div>
+
+        <form class="profile-form" id="profileForm">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">
+                    Cancel
+                </button>
+                <button type="submit" class="btn btn-primary">
+                    Save Changes
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Load existing profile data when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedProfile = JSON.parse(localStorage.getItem('userProfile')) || {};
+            document.getElementById('fullName').value = savedProfile.fullName || '';
+            document.getElementById('email').value = savedProfile.email || '';
+            document.getElementById('phone').value = savedProfile.phone || '';
+            
+            // Load profile picture if exists
+            if (savedProfile.profilePicture) {
+                const profilePicture = document.querySelector('.profile-picture');
+                profilePicture.innerHTML = `<img src="${savedProfile.profilePicture}" alt="Profile Picture">`;
+            }
+        });
+
+        // Handle profile image upload
+        document.getElementById('profileImageInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const profilePicture = document.querySelector('.profile-picture');
+                    profilePicture.innerHTML = `<img src="${e.target.result}" alt="Profile Picture">`;
+                    
+                    // Save image to localStorage immediately
+                    const savedProfile = JSON.parse(localStorage.getItem('userProfile')) || {};
+                    savedProfile.profilePicture = e.target.result;
+                    localStorage.setItem('userProfile', JSON.stringify(savedProfile));
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Handle form submission - SINGLE event listener
+        document.getElementById('profileForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const profileData = {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                profilePicture: document.querySelector('.profile-picture img')?.src || ''
+            };
+
+            // Save to localStorage
+            localStorage.setItem('userProfile', JSON.stringify(profileData));
+            
+            // Show success message
+            alert('Profile updated successfully!');
+            
+            // Redirect back to home page
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,7 +1,23 @@
 console.log("hello working");
 
-// The floating button js
+// Global function for profile toggle
+function toggleProfile() {
+    const dropdown = document.getElementById('profileDropdown');
+    dropdown.classList.toggle('show');
+}
 
+// Close dropdown when clicking outside (global)
+document.addEventListener('click', function(event) {
+    const dropdown = document.getElementById('profileDropdown');
+    const profileBtn = document.querySelector('.profile-btn');
+    const profileContainer = document.querySelector('.profile-container');
+    
+    if (dropdown && profileBtn && !profileContainer.contains(event.target)) {
+        dropdown.classList.remove('show');
+    }
+});
+
+// The floating button js
 document.addEventListener('DOMContentLoaded', function() {
     const floatingBtn = document.getElementById('floatingBtn');
     const searchModal = document.getElementById('searchModal');
@@ -104,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
             searchInput.value = '';
         }
     });
-    
+
     // Search functionality
     searchSubmit.addEventListener('click', performSearch);
     searchInput.addEventListener('keypress', function(e) {
@@ -164,74 +180,113 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // The start of Image slider js
 document.addEventListener('DOMContentLoaded', function() {
-            const slider = document.querySelector('.slider');
-            const slides = document.querySelectorAll('.slide');
-            const prevBtn = document.querySelector('.btn-prev');
-            const nextBtn = document.querySelector('.btn-next');
-            const dotsContainer = document.querySelector('.dots-container');
-            
-            let currentSlide = 0;
-            const slideCount = slides.length;
-            
-            // Create dots
-            for (let i = 0; i < slideCount; i++) {
-                const dot = document.createElement('div');
-                dot.classList.add('dot');
-                if (i === 0) dot.classList.add('active');
-                dot.addEventListener('click', () => goToSlide(i));
-                dotsContainer.appendChild(dot);
-            }
-            
-            const dots = document.querySelectorAll('.dot');
-            
-            // Function to update slider position
-            function updateSlider() {
-                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-                
-                // Update active dot
-                dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentSlide);
-                });
-            }
-            
-            // Go to specific slide
-            function goToSlide(slideIndex) {
-                currentSlide = slideIndex;
-                updateSlider();
-            }
-            
-            // Next slide
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % slideCount;
-                updateSlider();
-            }
-            
-            // Previous slide
-            function prevSlide() {
-                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
-                updateSlider();
-            }
-            
-            // Event listeners for buttons
-            nextBtn.addEventListener('click', nextSlide);
-            prevBtn.addEventListener('click', prevSlide);
-            
-            // Auto slide every 5 seconds
-            let slideInterval = setInterval(nextSlide, 5000);
-            
-            // Pause auto-slide on hover
-            const sliderContainer = document.querySelector('.slider-container');
-            sliderContainer.addEventListener('mouseenter', () => {
-                clearInterval(slideInterval);
-            });
-            
-            sliderContainer.addEventListener('mouseleave', () => {
-                slideInterval = setInterval(nextSlide, 5000);
-            });
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') prevSlide();
-                if (e.key === 'ArrowRight') nextSlide();
-            });
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.btn-prev');
+    const nextBtn = document.querySelector('.btn-next');
+    const dotsContainer = document.querySelector('.dots-container');
+    
+    let currentSlide = 0;
+    const slideCount = slides.length;
+    
+    // Create dots
+    for (let i = 0; i < slideCount; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+    
+    const dots = document.querySelectorAll('.dot');
+    
+    // Function to update slider position
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Update active dot
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
         });
+    }
+    
+    // Go to specific slide
+    function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        updateSlider();
+    }
+    
+    // Next slide
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slideCount;
+        updateSlider();
+    }
+    
+    // Previous slide
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+        updateSlider();
+    }
+    
+    // Event listeners for buttons
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+    
+    // Auto slide every 5 seconds
+    let slideInterval = setInterval(nextSlide, 5000);
+    
+    // Pause auto-slide on hover
+    const sliderContainer = document.querySelector('.slider-container');
+    sliderContainer.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+    
+    sliderContainer.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(nextSlide, 5000);
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+    });
+});
+
+// the profile data js
+
+// Load and display user profile in the header
+function loadUserProfile() {
+    const savedProfile = JSON.parse(localStorage.getItem('userProfile'));
+    if (savedProfile) {
+        // Update profile dropdown info
+        const profileInfo = document.querySelector('.profile-info');
+        if (profileInfo) {
+            const nameElement = profileInfo.querySelector('h3');
+            const emailElement = profileInfo.querySelector('p');
+            
+            if (nameElement) nameElement.textContent = savedProfile.fullName || 'Guest User';
+            if (emailElement) emailElement.textContent = savedProfile.email || 'Click "My Profile" to setup your account';
+        }
+        
+        // Update profile picture in button if exists
+        if (savedProfile.profilePicture) {
+            const profileBtn = document.querySelector('.profile-btn');
+            if (profileBtn) {
+                profileBtn.innerHTML = `<img src="${savedProfile.profilePicture}" alt="Profile" style="width: 24px; height: 24px; border-radius: 50%;">`;
+            }
+            
+            // Update profile picture in dropdown if exists
+            const profileAvatar = document.querySelector('.profile-avatar');
+            if (profileAvatar) {
+                profileAvatar.innerHTML = `<img src="${savedProfile.profilePicture}" alt="Profile" style="width: 40px; height: 40px; border-radius: 50%;">`;
+            }
+        }
+    }
+}
+
+// Call this when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    loadUserProfile();
+    
+    // Your existing DOMContentLoaded code...
+});

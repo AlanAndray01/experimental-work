@@ -428,7 +428,7 @@ nav img {
     }
 
     .profile-btn {
-        width: 40px;
+        width: 60px;
         height: 40px;
 
     }
@@ -437,7 +437,7 @@ nav img {
     position: absolute;
     top: 100%;
     right: 0;
-    width: 340px;
+    width: 320px;
 }
 }
 

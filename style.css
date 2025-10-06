@@ -96,9 +96,9 @@ nav img {
 }
 
 .user-icon {
-    width: 30px !important;
+    width: 40px !important;
     /* Increased from 24px */
-    height: 30px !important;
+    height: 40px !important;
     /* Increased from 24px */
 }
 
@@ -428,7 +428,7 @@ nav img {
     }
 
     .profile-btn {
-        width: 60px;
+        width: 40px;
         height: 40px;
 
     }
@@ -437,7 +437,7 @@ nav img {
     position: absolute;
     top: 100%;
     right: 0;
-    width: 320px;
+    width: 300px;
 }
 }
 

@@ -923,7 +923,7 @@ main {
 }
 
     .featurebox {
-        width: 120px;
+        width: 160px;
         height: 180px;
         margin: 4px;
         padding: 0px;
@@ -1072,7 +1072,7 @@ main {
 }
 
     .featurebox {
-        width: 120px;
+        width: 160px;
         height: 180px;
         margin: 4px;
         padding: 0px;
@@ -1098,7 +1098,7 @@ main {
    }
 
    .pro {
-    width: 120px;
+    width: 170px;
     height: 240px;
     /* border: 1px solid black; */
     display: flex;

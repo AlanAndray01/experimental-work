@@ -1161,3 +1161,88 @@ main {
     text-align: center;
 }
 } 
+
+
+/* --- Mobile View Fix (2-Column Product Layout) --- */
+@media (max-width: 768px) {
+
+  /* Feature Section */
+  .feature {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .featurebox {
+    width: 45%;
+    height: 160px;
+  }
+
+  .featurebox img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Product Section */
+  .pro-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    justify-items: center;
+    padding: 10px;
+  }
+
+  .pro {
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .pro img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+  }
+
+  .pdescription h4 {
+    font-size: 16px;
+  }
+
+  .pdescription span {
+    font-size: 14px;
+  }
+
+  .pdescription h5 {
+    font-size: 12px;
+  }
+
+  .fa-shopping-cart {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+
+  /* Banner and Slider */
+  #banner {
+    height: auto;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  #banner h4 {
+    font-size: 22px;
+  }
+
+  #banner button {
+    width: 120px;
+    height: 38px;
+  }
+
+  .slider {
+    height: 300px;
+  }
+
+  .slide-title {
+    font-size: 1.2rem;
+  }
+}

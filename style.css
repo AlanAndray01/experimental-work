@@ -1015,7 +1015,7 @@ main {
 
 
 
-/* @media (max-width: 480px) {
+ @media (max-width: 480px) {
     .search-header {
         flex-direction: column;
         gap: 20px;
@@ -1041,9 +1041,9 @@ main {
     .profile-btn {
         width: 42px !important;
         /* Same width and height */
-        /* height: 42px !important; */
+        height: 42px !important;
         /* Same width and height */
-        /* min-width: 42px !important;
+        min-width: 42px !important;
         min-height: 42px !important;
     }
 
@@ -1059,10 +1059,10 @@ main {
         font-size: 0.8rem;
     }
 
-        .feature {
+    .feature {
     width: 100%;
     height: auto;
-    /* border: 1px solid green; */
+    border: 1px solid green;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -1072,7 +1072,7 @@ main {
 }
 
     .featurebox {
-        width: 160px;
+        width: 130px;
         height: 180px;
         margin: 4px;
         padding: 0px;
@@ -1098,9 +1098,9 @@ main {
    }
 
    .pro {
-    width: 170px;
+    width: 140px;
     height: 240px;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     display: flex;
     border-radius: 8px;
     gap: 4px;
@@ -1160,4 +1160,4 @@ main {
     font-size: 20px;
     text-align: center;
 }
-}  */
+} 

@@ -8,7 +8,7 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" href="https://www.shutterstock.com/image-vector/black-crow-logo-600nw-1311123389.jpg"
         type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -26,147 +26,369 @@
                     <h2>Valente Watches</h2>
                 </div>
                 <div class="rightnav">
-            <div class="profile-container">
-                <button class="profile-btn" onclick="toggleProfile()">
-                    <!-- Default User Icon -->
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="user-icon">
-                        <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="currentColor" stroke-width="2"/>
-                        <path d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </button>
-                <div class="profile-dropdown" id="profileDropdown">
-                    <div class="profile-header">
-                        <!-- Default user icon in dropdown -->
-                        <div class="profile-avatar">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="currentColor" stroke-width="2"/>
-                                <path d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21" stroke="currentColor" stroke-width="2"/>
+                    <div class="profile-container">
+                        <button class="profile-btn" onclick="toggleProfile()">
+                            <!-- Default User Icon -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="user-icon">
+                                <path
+                                    d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <path
+                                    d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21"
+                                    stroke="currentColor" stroke-width="2" />
                             </svg>
+                        </button>
+                        <div class="profile-dropdown" id="profileDropdown">
+                            <div class="profile-header">
+                                <!-- Default user icon in dropdown -->
+                                <div class="profile-avatar">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"
+                                            stroke="currentColor" stroke-width="2" />
+                                        <path
+                                            d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21"
+                                            stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="profile-info">
+                                    <h3>Guest User</h3>
+                                    <p>Click "My Profile" to setup your account</p>
+                                </div>
+                            </div>
+                            <div class="profile-menu">
+                                <!-- My Profile link that opens a new page -->
+                                <a href="profile.html" class="profile-menu-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"
+                                            stroke="currentColor" stroke-width="2" />
+                                        <path
+                                            d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21"
+                                            stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                    <span>My Profile</span>
+                                </a>
+                                <a href="#" class="profile-menu-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+                                            stroke="currentColor" stroke-width="2" />
+                                        <path
+                                            d="M19.4 15C19.2669 15.3015 19.1339 15.603 19.0008 15.9045C18.5291 16.903 18.0574 17.9015 17.5857 18.9C17.2739 19.5696 16.9621 20.2392 16.6503 20.9088C16.3385 21.5784 15.8723 22.2 15.1213 22.2C14.3702 22.2 9.6298 22.2 8.87868 22.2C8.12756 22.2 7.66144 21.5784 7.34964 20.9088C7.03784 20.2392 6.72604 19.5696 6.41424 18.9C5.94254 17.9015 5.47084 16.903 4.99914 15.9045C4.86611 15.603 4.73307 15.3015 4.60004 15"
+                                            stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                    <span>Settings</span>
+                                </a>
+                                <a href="#" class="profile-menu-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 3H6L8 21H16L18 3H22" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span>Orders</span>
+                                </a>
+                                <a href="#" class="profile-menu-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.31802 6.31802C2.56066 8.07538 2.56066 10.9246 4.31802 12.682L12.0001 20.364L19.682 12.682C21.4393 10.9246 21.4393 8.07538 19.682 6.31802C17.9246 4.56066 15.0754 4.56066 13.318 6.31802L12.0001 7.63609L10.682 6.31802C8.92462 4.56066 6.07538 4.56066 4.31802 6.31802Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span>Wishlist</span>
+                                </a>
+                                <div class="profile-menu-divider"></div>
+                                <a href="#" class="profile-menu-item logout">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M16 17L21 12L16 7" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M21 12H9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span>Sign Out</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="profile-info">
-                            <h3>Guest User</h3>
-                            <p>Click "My Profile" to setup your account</p>
-                        </div>
-                    </div>
-                    <div class="profile-menu">
-                        <!-- My Profile link that opens a new page -->
-                        <a href="profile.html" class="profile-menu-item">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="currentColor" stroke-width="2"/>
-                                <path d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                            <span>My Profile</span>
-                        </a>
-                        <a href="#" class="profile-menu-item">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="2"/>
-                                <path d="M19.4 15C19.2669 15.3015 19.1339 15.603 19.0008 15.9045C18.5291 16.903 18.0574 17.9015 17.5857 18.9C17.2739 19.5696 16.9621 20.2392 16.6503 20.9088C16.3385 21.5784 15.8723 22.2 15.1213 22.2C14.3702 22.2 9.6298 22.2 8.87868 22.2C8.12756 22.2 7.66144 21.5784 7.34964 20.9088C7.03784 20.2392 6.72604 19.5696 6.41424 18.9C5.94254 17.9015 5.47084 16.903 4.99914 15.9045C4.86611 15.603 4.73307 15.3015 4.60004 15" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                            <span>Settings</span>
-                        </a>
-                        <a href="#" class="profile-menu-item">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 3H6L8 21H16L18 3H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>Orders</span>
-                        </a>
-                        <a href="#" class="profile-menu-item">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.31802 6.31802C2.56066 8.07538 2.56066 10.9246 4.31802 12.682L12.0001 20.364L19.682 12.682C21.4393 10.9246 21.4393 8.07538 19.682 6.31802C17.9246 4.56066 15.0754 4.56066 13.318 6.31802L12.0001 7.63609L10.682 6.31802C8.92462 4.56066 6.07538 4.56066 4.31802 6.31802Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>Wishlist</span>
-                        </a>
-                        <div class="profile-menu-divider"></div>
-                        <a href="#" class="profile-menu-item logout">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M16 17L21 12L16 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M21 12H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>Sign Out</span>
-                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
             </nav>
+            <div class="subnav">
+                <ul>
+                    <li class="subnavlist">Home</li>
+                    <li class="subnavlist">Shop</li>
+                    <li class="subnavlist">Blog</li>
+                    <li class="subnavlist">About</li>
+                    <li class="subnavlist">Contact</li>
+                </ul>
+            </div>
         </header>
 
         <!-- The start of an image slider -->
-<main>
+        <main>
 
-        <div class="slider-container">
-        <div class="slider">
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Mountain Landscape">
-                <div class="slide-content">
-                    <h3 class="slide-title">Mountain Landscape</h3>
-                    <p class="slide-description">Breathtaking view of snow-capped mountains at sunrise</p>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Mountain Landscape">
+                        <div class="slide-content">
+                            <h3 class="slide-title">Mountain Landscape</h3>
+                            <p class="slide-description">Breathtaking view of snow-capped mountains at sunrise</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Forest Path">
+                        <div class="slide-content">
+                            <h3 class="slide-title">Forest Path</h3>
+                            <p class="slide-description">A peaceful walk through a lush green forest</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Ocean Waves">
+                        <div class="slide-content">
+                            <h3 class="slide-title">Ocean Waves</h3>
+                            <p class="slide-description">Powerful waves crashing against the rocky shore</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Northern Lights">
+                        <div class="slide-content">
+                            <h3 class="slide-title">Northern Lights</h3>
+                            <p class="slide-description">The magical aurora borealis dancing in the night sky</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Desert Dunes">
+                        <div class="slide-content">
+                            <h3 class="slide-title">Desert Dunes</h3>
+                            <p class="slide-description">Endless sand dunes under the golden sun</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Forest Path">
-                <div class="slide-content">
-                    <h3 class="slide-title">Forest Path</h3>
-                    <p class="slide-description">A peaceful walk through a lush green forest</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ocean Waves">
-                <div class="slide-content">
-                    <h3 class="slide-title">Ocean Waves</h3>
-                    <p class="slide-description">Powerful waves crashing against the rocky shore</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Northern Lights">
-                <div class="slide-content">
-                    <h3 class="slide-title">Northern Lights</h3>
-                    <p class="slide-description">The magical aurora borealis dancing in the night sky</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Desert Dunes">
-                <div class="slide-content">
-                    <h3 class="slide-title">Desert Dunes</h3>
-                    <p class="slide-description">Endless sand dunes under the golden sun</p>
-                </div>
-            </div>
-        </div>
-        
-        <button class="btn btn-prev">&#10094;</button>
-        <button class="btn btn-next">&#10095;</button>
-        
-        <div class="dots-container">
-            <!-- Dots will be generated by JavaScript -->
-        </div>
-    </div>
-    <!-- Floating Search Button -->
-<div class="floating-search-btn" id="floatingBtn">
-    <i class="fas fa-search"></i>
-</div>
 
-<!-- Full Screen Search Modal -->
-<div class="search-modal" id="searchModal">
-    <div class="search-container">
-        <div class="search-header">
-            <h2>Search Items</h2>
-            <button class="close-btn" id="closeModal">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="search-box">
-            <input type="text" class="search-input" id="searchInput" placeholder="What are you looking for?">
-            <button class="search-submit" id="searchSubmit">
-                <i class="fas fa-search"></i> Search
-            </button>
-        </div>
-        <div class="search-results" id="searchResults">
-            <!-- Search results will appear here -->
-        </div>
-    </div>
-</div>
-</main>
+                <button class="btn btn-prev">&#10094;</button>
+                <button class="btn btn-next">&#10095;</button>
+
+                <div class="dots-container">
+                    <!-- Dots will be generated by JavaScript -->
+                </div>
+            </div>
+            <!-- Floating Search Button -->
+            <div class="floating-search-btn" id="floatingBtn">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <!-- Full Screen Search Modal -->
+            <div class="search-modal" id="searchModal">
+                <div class="search-container">
+                    <div class="search-header">
+                        <h2>Search Items</h2>
+                        <button class="close-btn" id="closeModal">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" class="search-input" id="searchInput"
+                            placeholder="What are you looking for?">
+                        <button class="search-submit" id="searchSubmit">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                    <div class="search-results" id="searchResults">
+                        <!-- Search results will appear here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section class="feature">
+            <div class="featurebox">
+                <img src="\assets\Images\male-4494498_1280.jpg" alt="feature 1">
+                <h4 class="h41">Free Shipping</h4>
+            </div>
+            <div class="featurebox">
+                <img src="\assets\Images\watch-7200156_1280.jpg" alt="feature 1">
+                <h4 class="h42">Online Order</h4>
+            </div>
+            <div class="featurebox">
+                <img src="\assets\Images\Time.jpg" alt="feature 1">
+                <h4 class="h43">Save Money</h4>
+            </div>
+            <div class="featurebox">
+                <img src="\assets\Images\watch-7434946_1280.jpg" alt="feature 1">
+                <h4 class="h44">F 24/7 Support</h4>
+            </div>
+            <div class="featurebox">
+                <img src="\assets\Images\wrist-watch-1237417_1280.jpg" alt="feature 1">
+                <h4 class="h45">Promotions</h4>
+            </div>
+            <div class="featurebox">
+                <img src="\assets\Images\breitling-1327165_1280.jpg" alt="feature 1">
+                <h4 class="h46">Happy Sell</h4>
+            </div>
+        </section>
+
+        <section class="featureproducts">
+            <h1>Featured Products</h1>
+            <p>Summer Collection New Modern Designs</p>
+        </section>
+        <section class="pro-container">
+            <!-- Product 1 -->
+            <div class="pro">
+                <img src="\assets\Images\watch-7200156_1280.jpg" alt="Watch">
+                <div class="pdescription">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$99</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+<!-- Product 2 -->
+            <div class="pro">
+                <img src="\assets\Images\rolex-watch-1362341_1280.jpg" alt="Watch">
+                <div class="pdescription">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$99</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+<!-- Product 3 -->
+            <div class="pro">
+                <img src="\assets\Images\breitling-1327165_1280.jpg" alt="Watch">
+                <div class="pdescription">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$99</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+<!-- Product 4 -->
+            <div class="pro">
+                <img src="\assets\Images\wrist-watch-1237417_1280.jpg" alt="Watch">
+                <div class="pdescription">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$99</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+<!-- Product 5 -->
+            <div class="pro">
+                <img src="\assets\Images\watch-7434946_1280.jpg" alt="Watch">
+                <div class="pdescription">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$99</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+<!-- Product 6 -->
+            <div class="pro">
+                <img src="\assets\Images\male-watch-144648_1280.jpg" alt="Watch">
+                <div class="pdescription">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$99</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+<!-- Product 7 -->
+            <div class="pro">
+                <img src="\assets\Images\watch-7433126_1280.jpg" alt="Watch">
+                <div class="pdescription">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$99</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+<!-- Product 8 -->
+            <div class="pro">
+                <img src="\assets\Images\aman&watch.jpg" alt="Watch">
+                <div class="pdescription">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$99</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+        </section>
+
+        <section id="banner">
+            <h4>Repair Services</h4>
+            <h2>Up to <span>70% off</span> - All Watches & Accessories</h2>
+            <button><a href="#">Explore More</a></button>
+        </section>
     </div>
     <script src="script.js"></script>
 </body>

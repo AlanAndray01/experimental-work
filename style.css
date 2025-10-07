@@ -923,7 +923,7 @@ main {
 }
 
     .featurebox {
-        width: 160px;
+        width: 156px;
         height: 180px;
         margin: 4px;
         padding: 0px;
@@ -949,7 +949,7 @@ main {
    }
 
    .pro {
-    width: 120px;
+    width: 160px;
     height: 240px;
     /* border: 1px solid black; */
     display: flex;
@@ -1015,7 +1015,7 @@ main {
 
 
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .search-header {
         flex-direction: column;
         gap: 20px;
@@ -1041,9 +1041,9 @@ main {
     .profile-btn {
         width: 42px !important;
         /* Same width and height */
-        height: 42px !important;
+        /* height: 42px !important; */
         /* Same width and height */
-        min-width: 42px !important;
+        /* min-width: 42px !important;
         min-height: 42px !important;
     }
 
@@ -1160,4 +1160,4 @@ main {
     font-size: 20px;
     text-align: center;
 }
-}
+}  */
